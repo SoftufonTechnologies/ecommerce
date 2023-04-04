@@ -1,7 +1,6 @@
 <?php 
 require('top.php');
 
-
 $resBanner=mysqli_query($con,"select * from banner where status='1' order by order_no asc");
 
 ?>
@@ -35,7 +34,7 @@ $resBanner=mysqli_query($con,"select * from banner where status='1' order by ord
                             </div>
                             <div class="col-lg-6 col-sm-5 col-xs-12 col-md-5">
                                 <div class="slide__thumb">
-                                    <img src="image1\banner11.webp" width="200%" height="200%">
+                                    <img src="<?php echo BANNER_SITE_PATH.$rowBanner['image']?>" >
                                 </div>
                             </div>
                         </div>
@@ -69,7 +68,7 @@ $resBanner=mysqli_query($con,"select * from banner where status='1' order by ord
                                 <div class="category">
                                     <div class="ht__cat__thumb">
                                         <a href="product.php?id=<?php echo $list['id']?>">
-                                            <img src="image1\blacktshirt.jpg" alt="product images">
+                                            <img src="<?php echo PRODUCT_IMAGE_SITE_PATH.$list['image']?>" alt="product images">
                                         </a>
                                     </div>
                                     <div class="fr__hover__info">
@@ -116,7 +115,7 @@ $resBanner=mysqli_query($con,"select * from banner where status='1' order by ord
                                 <div class="category">
                                     <div class="ht__cat__thumb">
                                         <a href="product.php?id=<?php echo $list['id']?>">
-                                        <img src="<?php echo PRODUCT_IMAGE_SITE_PATH.$list['image']?>" alt="product images">
+                                            <img src="<?php echo PRODUCT_IMAGE_SITE_PATH.$list['image']?>" alt="product images">
                                         </a>
                                     </div>
                                     <div class="fr__hover__info">
